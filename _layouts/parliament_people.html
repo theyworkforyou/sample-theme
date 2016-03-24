@@ -20,11 +20,37 @@ layout: default
 
       <div class="constituency-party">
 
-        {% for membership in person.memberships %}
+        {% for membership in person.memberships reversed %}
         {% assign party = membership.party %}
         {% assign area = membership.area %}
+        {% assign legislative_period = membership.legislative_period %}
 
         <dl>
+          <dt>Legislative period</dt>
+          <dd>{{ legislative_period.name }}</dt>
+
+          {% if membership.start_date or legislative_period.start_date %}
+          <dt>Start date</dt>
+          <dd>
+          {% if membership.start_date %}
+          {{ membership.start_date | date_to_string }}
+          {% else %}
+          {{ legislative_period.start_date | date_to_string }}
+          {% endif %}
+          </dd>
+          {% endif %}
+
+          {% if membership.end_date or legislative_period.end_date %}
+          <dt>End date</dt>
+          <dd>
+          {% if membership.end_date %}
+          {{ membership.end_date | date_to_string }}
+          {% else %}
+          {{ legislative_period.end_date | date_to_string }}
+          {% endif %}
+          </dd>
+          {% endif %}
+
           {% if area %}
           <dt>Constituency</dt>
           <dd><a href="{{ area.url }}">{{ area.name }}</a></dd>
