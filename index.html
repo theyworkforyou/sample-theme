@@ -4,4 +4,31 @@ title: Home
 ---
 
 <h2>Increasing transparency</h2>
-<p>This is a sample PMO site theme.</p>
+
+<p class="lead">This is a sample PMO site theme.</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <h3>Parties</h3>
+
+    <ul class="list-group">
+      {% assign groups = site.parliament_organizations | where: "classification", "party" %}
+      {% for group in groups %}
+      <li class="list-group-item">
+        <a href="{{ group.url }}">{{ group.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h3>Areas</h3>
+
+    <ul class="list-group">
+      {% for area in site.parliament_areas %}
+      <li class="list-group-item">
+        <a href="{{ area.url }}">{{ area.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
