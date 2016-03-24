@@ -1,5 +1,8 @@
-<div class="social-and-tools">
-  <ul class="tools">
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sharing <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
     <li>
       <a  href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url | cgi_escape }}&amp;t={{ page.name | cgi_escape }}"
           target="_blank"
@@ -13,13 +16,11 @@
             >Share on Twitter</a>
       </li>
 
-
       <li>
         <a  href="{{ page.url }}#comments"
             class="big-btn-text-green"
             >
             Comments <span class="fb-comments-count"></span></a>
       </li>
-
   </ul>
 </div>

@@ -1,8 +1,4 @@
-<div id="main-menu">
-  <nav class="wrapper">
-    <ul>
-      <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
-      <li><a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a></li>
-    </ul>
-  </nav>
-</div>
+<ul class="nav nav-tabs">
+  <li role="presentation"{% if page.url == "/" %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
+  <li role="presentation"{% if page.url == "/blog/" %} class="active"{% endif %}><a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a></li>
+</ul>

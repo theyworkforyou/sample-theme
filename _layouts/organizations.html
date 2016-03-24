@@ -4,11 +4,13 @@ layout: default
 
 {% assign organization = page %}
 
-<div class="title-space">
-  <div class="title-space__name">
-    <h1>{{ organization.name }}</h1>
-    <p>Political Party</p>
-  </div>
+<div class="page-header">
+  <h2>
+    {{ organization.name }}
+    {% if organization.classification == 'party' %}
+    <small>Political Party</small>
+    {% endif %}
+  </h2>
 </div>
 
 <div class="profile-pic">
@@ -30,7 +32,7 @@ layout: default
 
   <h2>Current Politicians Representing {{ organization.name }}</h2>
 
-  <ul class="listing">
+  <ul class="media-list">
     {% for membership in organization.memberships %}
       {% include membership_item.html %}
     {% endfor %}

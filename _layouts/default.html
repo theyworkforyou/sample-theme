@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
@@ -10,18 +10,18 @@
 
     {% facebook_javascript_sdk %}
 
-    {% include main_menu.html %}
+    <div class="container">
+      {% include header.html %}
 
-    {% include header.html %}
+      {% include main_menu.html %}
 
-    <div id="page">
-      <div class="page-wrapper wrapper">
-        {{ content }}
-        <br clear="both">
+      <div class="row">
+        <div class="col-md-12">
+          {{ content }}
+        </div>
       </div>
+
+      {% include footer.html %}
     </div>
-
-    {% include footer.html %}
-
   </body>
 </html>
