@@ -3,9 +3,6 @@ layout: default
 ---
 
 {% assign person = page %}
-{% assign membership = person.memberships | first %}
-{% assign party = membership.party %}
-{% assign area = membership.area %}
 
 <div class="title-space">
   <div class="title-space__name">
@@ -27,6 +24,10 @@ layout: default
   <div class="sidebar">
     <div class="constituency-party">
 
+      {% for membership in person.memberships %}
+      {% assign party = membership.party %}
+      {% assign area = membership.area %}
+
       {% if area %}
       <h3>Constituency</h3>
       <ul>
@@ -38,6 +39,7 @@ layout: default
       <ul class="party-memberships">
         <li><a href="{{ party.url }}" class="party-membership party-membership--political-party">{{ party.name }}</a></li>
       </ul>
+      {% endfor %}
     </div>
   </div>
 
