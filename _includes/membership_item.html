@@ -7,9 +7,7 @@
   <div class="media-left">
     <a href="{{ person.url }}">
       {% if person.image %}
-      <img src="{{ person.image }}" srcset="{{ person.image }}" alt="{{ person.name }}">
-      {% else %}
-      <img src="/images/person-210x210.jpg" alt="Person logo">
+      <img src="{{ person.image }}" alt="{{ person.name }}" width="100">
       {% endif %}
     </a>
   </div>

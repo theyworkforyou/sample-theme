@@ -14,9 +14,7 @@ layout: default
     <div class="col-md-3">
       <div class="profile-pic">
         {% if person.image %}
-        <img itemprop="image" src="{{ person.image }}" alt=" Photo of {{ person.name }}" class="img-responsive img-thumbnail">
-        {% else %}
-        <img src="/images/person-210x210.jpg" alt="Person logo">
+        <img itemprop="image" src="{{ person.image }}" alt=" Photo of {{ person.name }}" width="100">
         {% endif %}
       </div>
 
