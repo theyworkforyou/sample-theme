@@ -16,8 +16,6 @@ layout: default
 <div class="profile-pic">
   {% if organization.image %}
     <img src="{{ organization.image }}" alt="{{ organization.name }}"/>
-  {% else %}
-    <img src="/images/organisation-210x210.jpg" alt="Organization logo"/>
   {% endif %}
 </div>
 
@@ -30,7 +28,7 @@ layout: default
 
 <div class="large-container profile-bulk">
 
-  <h2>Current Politicians Representing {{ organization.name }}</h2>
+  <h3>Politicians Representing {{ organization.name }}</h3>
 
   <ul class="media-list">
     {% for membership in organization.memberships %}

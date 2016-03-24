@@ -4,17 +4,9 @@ layout: default
 
 {% assign area = page %}
 
-<div class="title-space">
-  <div class="title-space__name">
-    <h1>{{ area.name }}</h1>
-    <p>Constituency</p>
-  </div>
+<div class="page-header">
+  <h2>{{ area.name }} <small>Constituency</small></h2>
 </div>
-
-<div class="profile-pic">
-  <img src="/images/place-200x200.jpg" alt="Place logo">
-</div>
-
 
 <div class="profile-info">
   <div class="sidebar">
@@ -24,7 +16,7 @@ layout: default
 
 <div class="large-container">
 
-  <h2>Current Politicians Representing {{ area.name }}</h2>
+  <h3>Politicians Representing {{ area.name }}</h3>
 
   <ul class="media-list">
     {% for membership in area.memberships %}

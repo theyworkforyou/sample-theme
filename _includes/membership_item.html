@@ -13,11 +13,14 @@
       {% endif %}
     </a>
   </div>
+
   <div class="media-body">
     <h4 class="media-heading"><a href="{{ person.url }}">{{ person.name }}</a></h4>
-    <p>
-      Constituency: <a class="listing__area" href="{{ area.url }}">{{ area.name }}</a> |
-      Party: <a class="listing__party" href="{{ party.url }}">{{ party.name }}</a>
-    </p>
+    <dl>
+      <dt>Constituency</dt>
+      <dd><a class="listing__area" href="{{ area.url }}">{{ area.name }}</a></dd>
+      <dt>Party</dt>
+      <dd><a class="listing__party" href="{{ party.url }}">{{ party.name }}</a></dd>
+    </dl>
   </div>
 </li>
