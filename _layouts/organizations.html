@@ -27,9 +27,9 @@ layout: default
 
 
 <div class="large-container profile-bulk">
-
   {% assign politicians = organization.memberships | group_by: "person_id" %}
-  <h3>{{ politicians | size }} Politicians Representing {{ organization.name }}</h3>
+
+  <h3>Politicians Representing {{ organization.name }}</h3>
 
   <ul class="media-list">
     {% for politician in politicians %}

@@ -17,7 +17,7 @@ layout: default
 <div class="large-container">
   {% assign politicians = area.memberships | group_by: "person_id" %}
 
-  <h3>{{ politicians | size }} Politicians Representing {{ area.name }}</h3>
+  <h3>Politicians Representing {{ area.name }}</h3>
 
   <ul class="media-list">
     {% for politician in politicians %}
