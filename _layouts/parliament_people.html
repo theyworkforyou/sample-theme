@@ -36,6 +36,8 @@ layout: default
           <dd><a href="{{ party.url }}" class="party-membership party-membership--political-party">{{ party.name }}</a></dd>
         </dl>
         {% endfor %}
+
+        {% include social.html comments=true %}
       </div>
     </div>
 
@@ -69,7 +71,7 @@ layout: default
 
         </dl>
 
-        {% include social.html %}
+        {% include comments.html %}
 
       </div>
     </div>
