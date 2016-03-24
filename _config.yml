@@ -26,16 +26,16 @@ exclude: [Gemfile, Gemfile.lock, vendor, README.md]
 
 everypolitician:
   sources:
-    - https://github.com/everypolitician/everypolitician-data/raw/master/data/Uganda/Parliament/ep-popolo-v1.0.json
+    parliament: https://github.com/everypolitician/everypolitician-data/raw/master/data/Uganda/Parliament/ep-popolo-v1.0.json
 
 collections:
   # Assembly
-  people:
+  parliament_people:
     output: true
     permalink: '/mps/:path/'
-  organizations:
+  parliament_organizations:
     output: true
     permalink: '/organizations/:path/'
-  areas:
+  parliament_areas:
     output: true
     permalink: '/areas/:path/'
