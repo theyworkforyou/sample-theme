@@ -24,34 +24,18 @@ exclude: [Gemfile, Gemfile.lock, vendor, README.md]
 # google_analytics:
 #   tracking_code: UA-660910-14
 
-# everypolitician:
-#   sources:
-#     assembly: https://github.com/everypolitician/everypolitician-data/raw/master/data/Nigeria/Assembly/ep-popolo-v1.0.json
-#     senate: https://github.com/everypolitician/everypolitician-data/raw/nigeria-senate/data/Nigeria/Senate/ep-popolo-v1.0.json
+everypolitician:
+  sources:
+    - https://github.com/everypolitician/everypolitician-data/raw/master/data/Uganda/Parliament/ep-popolo-v1.0.json
 
 collections:
   # Assembly
-  assembly_people:
+  people:
     output: true
-    permalink: '/assembly/person/:path/'
-  assembly_organizations:
+    permalink: '/mps/:path/'
+  organizations:
     output: true
-    permalink: '/assembly/organisation/:path/'
-  assembly_areas:
+    permalink: '/organizations/:path/'
+  areas:
     output: true
-    permalink: '/assembly/place/:path/'
-
-  # Senate
-  senate_people:
-    output: true
-    permalink: '/senate/person/:path/'
-  senate_organizations:
-    output: true
-    permalink: '/senate/organisation/:path/'
-  senate_areas:
-    output: true
-    permalink: '/senate/place/:path/'
-
-  executive_governors:
-    output: true
-    permalink: '/governors/person/:path/'
+    permalink: '/areas/:path/'
